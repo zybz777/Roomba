@@ -3,16 +3,16 @@
         {
             "name": "MOTORTEST",
             "includePath": [
-                "f:\\keilProject\\MOTORTEST\\Core\\Inc",
-                "f:\\keilProject\\MOTORTEST\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "f:\\keilProject\\MOTORTEST\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "f:\\keilProject\\MOTORTEST\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "f:\\keilProject\\MOTORTEST\\Drivers\\CMSIS\\Include",
+                "f:\\keilProject\\Roomba\\Core\\Inc",
+                "f:\\keilProject\\Roomba\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "f:\\keilProject\\Roomba\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "f:\\keilProject\\Roomba\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "f:\\keilProject\\Roomba\\Drivers\\CMSIS\\Include",
                 "F:\\KeilMDK\\ARM\\ARMCC\\include",
                 "F:\\KeilMDK\\ARM\\ARMCC\\include\\rw",
-                "f:\\keilProject\\MOTORTEST\\MDK-ARM",
-                "f:\\keilProject\\MOTORTEST\\Core\\Src",
-                "f:\\keilProject\\MOTORTEST\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "f:\\keilProject\\Roomba\\MDK-ARM",
+                "f:\\keilProject\\Roomba\\Core\\Src",
+                "f:\\keilProject\\Roomba\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
