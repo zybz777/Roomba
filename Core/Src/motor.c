@@ -3,8 +3,8 @@
 #include "gpio.h"
 #include "tim.h"
 
-int standard_L = 320; // 90度
-int standard_R = 300; // 90度
+int standard_L = 1500; // 90度
+int standard_R = 1500; // 90度
 void MOTOR1FORWARD(void)
 {
 	// MOTOR1 前进
