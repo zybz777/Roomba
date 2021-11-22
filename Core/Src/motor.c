@@ -118,7 +118,7 @@ void routine_road()
 {
 	static int go_long = 3000;
 	static int go_short = 1000;
-	static int turn_time = 1000;
+	static int turn_time = 1500;
 	static int stop_time = 500;
 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 1000);
 	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, 1000);
