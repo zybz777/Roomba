@@ -1,5 +1,5 @@
 #include "state_machine.h"
-
+#include "tim.h"
 STATE state_car = state_forward;
 //  状态机转移
 void state_trans()
@@ -69,6 +69,8 @@ void state_trans()
 // 状态机执行
 void state_exe()
 {
+    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 1000);
+    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, 1000);
     switch (state_car)
     {
     case state_forward:

@@ -31,3 +31,4 @@ motortest\state_machine.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim
 motortest\state_machine.o: ../Core/Inc/car.h
 motortest\state_machine.o: ../Core/Inc/motor.h
 motortest\state_machine.o: ../Core/Inc/gpio.h
+motortest\state_machine.o: ../Core/Inc/tim.h

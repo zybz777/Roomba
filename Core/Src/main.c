@@ -126,12 +126,11 @@ int main(void)
     //     ;
     //   flag = 0;
     // }
-    // state_exe();
+    state_exe();
     // motor1_forward();
     // motor2_forward();
     // car_forward();
-    HAL_GPIO_WritePin(MOTOR1_FORWARD_GPIO_Port, MOTOR1_FORWARD_Pin, GPIO_PIN_SET);
-  	HAL_GPIO_WritePin(MOTOR1_BACKWARD_GPIO_Port, MOTOR1_BACKWARD_Pin, GPIO_PIN_RESET);
+ 
     // if (flag == 1)
     // {
     //   // 闂佸憡鎸哥粔鐢稿蓟閻斿吋鈷曟繝濠傛媼閺嗭繝鏌ㄩ悤鍌涘?
