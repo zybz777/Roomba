@@ -97,10 +97,10 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  //HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_2);//使能tim1通道2 pwm
-  Hcsr04Init(&Hcsr04Info, &htim2, TIM_CHANNEL_4);  //  超声波模块初始化
-  Hcsr04Init(&Hcsr04Info1, &htim2, TIM_CHANNEL_2); //  超声波模块初始化
-  Hcsr04Init(&Hcsr04Info2, &htim2, TIM_CHANNEL_3); //  超声波模块初始化
+  //HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_2);//娴ｈ儻鍏榯im1闁岸浜�2 pwm
+  Hcsr04Init(&Hcsr04Info, &htim2, TIM_CHANNEL_4);  //  鐡掑懎锛愬▔銏∧侀崸妤€鍨垫慨瀣
+  Hcsr04Init(&Hcsr04Info1, &htim2, TIM_CHANNEL_2); //  鐡掑懎锛愬▔銏∧侀崸妤€鍨垫慨瀣
+  Hcsr04Init(&Hcsr04Info2, &htim2, TIM_CHANNEL_3); //  鐡掑懎锛愬▔銏∧侀崸妤€鍨垫慨瀣
   Hcsr04Start(&Hcsr04Info, TRIG_GPIO_Port, TRIG_Pin);
   Hcsr04Start(&Hcsr04Info1, TRIG1_GPIO_Port, TRIG1_Pin);
   Hcsr04Start(&Hcsr04Info2, TRIG2_GPIO_Port, TRIG2_Pin);
@@ -113,23 +113,23 @@ int main(void)
   while (1)
   {
 
-    /* 按下key0，停�? */
+    /* 閹稿绗卥ey0閿涘苯浠犻敓锟�? */
     // if (HAL_GPIO_ReadPin(KEY0_GPIO_Port, KEY0_Pin) == GPIO_PIN_RESET)
     // {
     //   while (HAL_GPIO_ReadPin(KEY0_GPIO_Port, KEY0_Pin) == GPIO_PIN_RESET)
-    //     ; //松开按键后执行动�?
+    //     ; //閺夋儳绱戦幐澶愭暛閸氬孩澧界悰灞藉З閿燂拷?
     //   flag = 1;
     // }
     // if (HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin) == GPIO_PIN_RESET)
     // {
     //   while (HAL_GPIO_ReadPin(KEY1_GPIO_Port, KEY1_Pin) == GPIO_PIN_RESET)
-    //     ; //松开按键后执行动�?
+    //     ; //閺夋儳绱戦幐澶愭暛閸氬孩澧界悰灞藉З閿燂拷?
     //   flag = 0;
     // }
 
     // if (flag == 1)
     // {
-    //   // 前方障碍�?
+    //   // 閸撳秵鏌熼梾婊咁暡閿燂拷?
     //   if (Hcsr04Read(&Hcsr04Info) < 20)
     //   {
     //     flag_mid = 1;
@@ -139,7 +139,7 @@ int main(void)
     //     flag_mid = 0;
     //   }
 
-    //   // 左方障碍�?
+    //   // 瀹革附鏌熼梾婊咁暡閿燂拷?
     //   if (Hcsr04Read(&Hcsr04Info1) < 10)
     //   {
     //     flag_left = 1;
@@ -148,7 +148,7 @@ int main(void)
     //   {
     //     flag_left = 0;
     //   }
-    //   // 右方
+    //   // 閸欒櫕鏌�
     //   if (Hcsr04Read(&Hcsr04Info2) < 10)
     //   {
     //     flag_right = 1;
@@ -167,7 +167,7 @@ int main(void)
     //   STOP();
     // }
 
-    // /******** 标志位控�? ********/
+    // /******** 閺嶅洤绻旀担宥嗗付閿燂拷? ********/
     // if (flag == 1)
     // {
     //   car_ctrl(flag_mid, flag_left, flag_right);
@@ -176,9 +176,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET); //LED0��
-    HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET); //LED1��
-    routine_road();
+    HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET); //LED0閿熸枻鎷�
+    HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET); //LED1閿熸枻鎷�
+    state_exe();
   }
   /* USER CODE END 3 */
 }
@@ -223,15 +223,15 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 void HAL_Delay_us(uint32_t nus)
 {
-  //将systic设置�?1us中断
+  //鐏忓敄ystic鐠佸墽鐤嗛敓锟�?1us娑擃厽鏌�
   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq() / 1000000);
-  //延时nus
+  //瀵よ埖妞俷us
   HAL_Delay(nus - 1);
-  //恢复systic中断�?1ms
+  //閹垹顦瞫ystic娑擃厽鏌囬敓锟�?1ms
   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq() / 1000);
 }
 /**
- * @description: 定时器输出捕获中�?
+ * @description: 鐎规碍妞傞崳銊ㄧ翻閸戠儤宕熼懢铚傝厬閿燂拷?
  * @param {TIM_HandleTypeDef} *htim
  * @return {*}
  */
@@ -243,7 +243,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 }
 
 /**
- * @description: 定时器溢出中�?
+ * @description: 鐎规碍妞傞崳銊﹀閸戣桨鑵戦敓锟�?
  * @param {*}
  * @return {*}
  */
