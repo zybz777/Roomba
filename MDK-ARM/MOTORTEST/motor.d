@@ -1,5 +1,6 @@
 motortest\motor.o: ..\Core\Src\motor.c
 motortest\motor.o: ../Core/Inc/motor.h
+motortest\motor.o: ../Core/Inc/gpio.h
 motortest\motor.o: ../Core/Inc/main.h
 motortest\motor.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 motortest\motor.o: ../Core/Inc/stm32f1xx_hal_conf.h
@@ -28,5 +29,3 @@ motortest\motor.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 motortest\motor.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 motortest\motor.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 motortest\motor.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
-motortest\motor.o: ../Core/Inc/gpio.h
-motortest\motor.o: ../Core/Inc/tim.h

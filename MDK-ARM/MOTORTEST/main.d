@@ -29,6 +29,7 @@ motortest\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 motortest\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 motortest\main.o: ../Core/Inc/tim.h
 motortest\main.o: ../Core/Inc/gpio.h
+motortest\main.o: ../Core/Inc/state_machine.h
+motortest\main.o: ../Core/Inc/car.h
 motortest\main.o: ../Core/Inc/motor.h
 motortest\main.o: ../Core/Inc/hc-sr04.h
-motortest\main.o: ../Core/Inc/car_control.h

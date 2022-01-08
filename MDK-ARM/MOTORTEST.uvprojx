@@ -403,11 +403,6 @@
               <FilePath>..\Core\Src\hc-sr04.c</FilePath>
             </File>
             <File>
-              <FileName>car_control.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\car_control.c</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/main.c</FilePath>
@@ -431,6 +426,16 @@
               <FileName>stm32f1xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32f1xx_hal_msp.c</FilePath>
+            </File>
+            <File>
+              <FileName>state_machine.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\state_machine.c</FilePath>
+            </File>
+            <File>
+              <FileName>car.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\car.c</FilePath>
             </File>
           </Files>
         </Group>
